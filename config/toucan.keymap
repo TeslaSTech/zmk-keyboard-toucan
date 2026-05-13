@@ -7,6 +7,7 @@
 #define NAV  1
 #define SYM  2
 #define ADJ  3
+#define MOUSE 4
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 5
 
@@ -62,15 +63,20 @@
                                    &kp LGUI &mo NAV &kp SPACE   &kp RET &mo 2 &kp RALT
             >;
         };
+        mouse {
+            display-name = "MOUSE";
+            bindings = <
+                &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
+                               &trans &mkp LCLK &mkp RCLK   &mkp MCLK &trans &trans
+            >;
+        };
         extra_1 {
                 status = "reserved";
         };
 
         extra_2 {
-                status = "reserved";
-        };
-
-        extra_3 {
                 status = "reserved";
         };
     };
